@@ -1,6 +1,10 @@
+
+/*
+ Obtener el promedio de edad de tres personas.
+ */
 import java.util.Scanner;
 
-public class obtener{
+public class obtener_edades_01 {
     public static void main(String[] args) {
         int edad_f = 0;
         Scanner edades = new Scanner(System.in);
@@ -16,7 +20,7 @@ public class obtener{
         int edad3 = edades.nextInt();
 
         edad_f = edad1 + edad2 + edad3;
-        System.out.println("La suma de las 3 edades ingresadas es de:"+ edad_f);
+        System.out.println("La suma de las 3 edades ingresadas es de:" + edad_f);
 
         edades.close();
     }
