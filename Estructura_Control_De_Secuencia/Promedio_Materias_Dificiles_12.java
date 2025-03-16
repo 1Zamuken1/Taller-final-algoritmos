@@ -1,8 +1,8 @@
+package Estructura_Control_De_Secuencia;
 import java.util.Scanner;
 
 public class Promedio_Materias_Dificiles_12 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void ejecutar(Scanner scanner) {
         double
         // calificaciones examen matematicas
         tareaM1, tareaM2, tareaM3,
@@ -57,6 +57,6 @@ public class Promedio_Materias_Dificiles_12 {
         System.out.println("Nota final en Química: " + notaFinalQuimica);
         System.out.println("Promedio general: " + promedioGeneral);
 
-        scanner.close();
+        scanner.nextLine();
     }
 }

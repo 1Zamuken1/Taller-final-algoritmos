@@ -1,13 +1,13 @@
+package Estructura_Control_De_Secuencia;
 import java.util.Scanner;
 
 public class Presupuesto_Hospital_19 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void ejecutar(Scanner scanner) {
 
         System.out.print("Por favor ingrese el monto total del presupuesto anual: ");
         double presupuesto_Total = scanner.nextDouble();
 
-        scanner.close();
+        scanner.nextLine();
 
         final double porcentaje_Ginecologia = 0.40;
         final double porcentaje_Traumatologia = 0.30;

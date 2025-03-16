@@ -1,8 +1,8 @@
+package Estructura_Control_De_Secuencia;
 import java.util.Scanner;
 
 public class Tonelada_Maiz_23 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void ejecutar(Scanner scanner) {
         int M, N, bultos_Harina, harina_Suelta, cajas_Aceite, aceite_Suelto;
         double B1, B2, B3, B4, ingreso_Harina, ingreso_Aceite, ingreso_Total;
 
@@ -24,7 +24,7 @@ public class Tonelada_Maiz_23 {
         System.out.print("Ingrese el precio de venta por litro de aceite (B4): ");
         B4 = scanner.nextDouble();
         
-        scanner.close();
+        scanner.nextLine();
 
         // Calcular ingresos por harina
         bultos_Harina = M / 24;

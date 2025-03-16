@@ -6,12 +6,11 @@
  *académica, 17300 Bolívares por cada hijo y una prima por hogar de 18000 Bolívares. Calcule y
  *muestre las asignaciones, las deducciones y el sueldo neto del trabajador.
  */
-
+package Estructura_Control_De_Secuencia;
 import java.util.Scanner;
 
 public class Salario_Deducibles_11 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void ejecutar(Scanner scanner) {
         String nombre_trabajador;
         int horas_trabajadas, horas_extra, num_hijos;
         double pago_hora, sueldo_base, sueldo_neto,
@@ -38,7 +37,7 @@ public class Salario_Deducibles_11 {
         System.out.println("Por favor ingrese el total de hijos");
         num_hijos = scanner.nextInt();
 
-        scanner.close();
+        scanner.nextLine();
 
         // Sueldo base
         sueldo_base = (horas_trabajadas * pago_hora);

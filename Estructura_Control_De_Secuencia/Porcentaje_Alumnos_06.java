@@ -2,12 +2,11 @@
  Un maestro desea saber qué porcentaje de hombres y qué porcentaje de mujeres hay en un grupo
 de estudiantes.
  */
-
+package Estructura_Control_De_Secuencia;
 import java.util.Scanner;
 
 public class Porcentaje_Alumnos_06 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void ejecutar(Scanner scanner) {
         int hombres = 0, mujeres = 0, suma;
         float porcentaje_hombres, porcentaje_mujeres;
 
@@ -26,7 +25,7 @@ public class Porcentaje_Alumnos_06 {
             System.out.println("El número no puede ser menor o igual a 0, por favor intente de nuevo");
             mujeres = scanner.nextInt();
         }
-        scanner.close();
+        scanner.nextLine();
 
         suma = hombres + mujeres;
         porcentaje_hombres = (hombres * 100) / suma;

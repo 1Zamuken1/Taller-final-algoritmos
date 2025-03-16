@@ -1,8 +1,8 @@
+package Estructura_Control_De_Secuencia;
 import java.util.Scanner;
 
 public class Mes_Luz_15 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void ejecutar(Scanner scanner) {
         double lecturaAnterior, lecturaActual, costoKilovatio, consumo, montoTotal;
 
         System.out.print("Por favor ingrese la lectura anterior del medidor: ");
@@ -13,7 +13,7 @@ public class Mes_Luz_15 {
 
         System.out.print("Por favor ingrese el costo por kilovatio: ");
         costoKilovatio = scanner.nextDouble();
-        scanner.close();
+        scanner.nextLine();
 
         consumo = lecturaActual - lecturaAnterior;
         montoTotal = consumo * costoKilovatio;

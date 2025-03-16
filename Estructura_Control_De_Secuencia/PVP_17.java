@@ -1,8 +1,8 @@
+package Estructura_Control_De_Secuencia;
 import java.util.Scanner;
 
 public class PVP_17 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void ejecutar(Scanner scanner) {
         double precio_Final, precio_PVP, porcentaje_Descuento;
 
         System.out.print("Por favor ingrese el precio de venta al público (PVP): ");
@@ -10,7 +10,7 @@ public class PVP_17 {
 
         System.out.print("Por favor ingrese el precio final pagado: ");
         precio_Final = scanner.nextDouble();
-        scanner.close();
+        scanner.nextLine();
 
         porcentaje_Descuento = ((precio_PVP - precio_Final) / precio_PVP) * 100;
 

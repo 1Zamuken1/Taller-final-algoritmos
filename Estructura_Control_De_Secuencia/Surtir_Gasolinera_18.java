@@ -1,8 +1,8 @@
+package Estructura_Control_De_Secuencia;
 import java.util.Scanner;
 
 public class Surtir_Gasolinera_18 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void ejecutar(Scanner scanner) {
 
         double galones_Surtidos, litros_Equivalentes, total_Pagar;
         final double litros_Por_Galon = 3.785;
@@ -11,7 +11,7 @@ public class Surtir_Gasolinera_18 {
         System.out.print("Por favor ingrese la cantidad de galones surtidos: ");
         galones_Surtidos = scanner.nextDouble();
 
-        scanner.close();
+        scanner.nextLine();
 
         litros_Equivalentes = galones_Surtidos * litros_Por_Galon;
         total_Pagar = litros_Equivalentes * precio_Por_Litro;

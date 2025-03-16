@@ -1,8 +1,8 @@
+package Estructura_Control_De_Secuencia;
 import java.util.Scanner;
 
 public class Recargo_Computador_22 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void ejecutar(Scanner scanner) {
         double P, T, precioCuotas, recargo;
 
         System.out.print("Ingrese el precio de contado del computador (P): ");
@@ -11,7 +11,7 @@ public class Recargo_Computador_22 {
         System.out.print("Ingrese el monto de cada cuota mensual (T): ");
         T = scanner.nextDouble();
 
-        scanner.close();
+        scanner.nextLine();
 
         precioCuotas = T * 12;
         recargo = ((precioCuotas - P) / P) * 100;

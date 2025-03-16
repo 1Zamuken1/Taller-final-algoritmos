@@ -4,11 +4,11 @@ se compone de los siguientes porcentajes: 55% del promedio de sus tres calificac
 30% de la calificación del examen final y 15% de la calificación de un trabajo final.
 */
 
+package Estructura_Control_De_Secuencia;
 import java.util.Scanner;
 
 public class Calificacion_Computacion_05 {
-    public static void main(String[] args) {
-        Scanner calificacion = new Scanner(System.in);
+    public static void ejecutar(Scanner calificacion) {
         Float calificacion_1, calificacion_2, calificacion_3, promedio_calificacion,
                 examen_final,
                 calificacion_trabajo_final, calificacion_final;
@@ -33,7 +33,7 @@ public class Calificacion_Computacion_05 {
         calificacion_trabajo_final = calificacion.nextFloat();
         calificacion_trabajo_final = (calificacion_trabajo_final * 15) / 100;
 
-        calificacion.close();
+        calificacion.nextLine();
 
         calificacion_final = (promedio_calificacion + examen_final + calificacion_trabajo_final);
         System.out.println("Su calificación final es de:" + calificacion_final);

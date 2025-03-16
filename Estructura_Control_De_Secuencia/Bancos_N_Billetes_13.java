@@ -4,12 +4,12 @@
  * N8 billetes de 100.
  */
 
+package Estructura_Control_De_Secuencia;
 import java.util.Scanner;
 
 public class Bancos_N_Billetes_13 {
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void ejecutar(Scanner scanner) {
         int n1, n2, n3, n4, n5, n6, n7, n8, total;
 
         System.out.println("Programa que calcula el dinero basado en a cantidad de billetes");
@@ -30,7 +30,7 @@ public class Bancos_N_Billetes_13 {
         System.out.print("Ingrese la cantidad de billetes de 100: ");
         n8 = scanner.nextInt();
 
-        scanner.close();
+        scanner.nextLine();
 
         total = (n1 * 50000) + (n2 * 20000) + (n3 * 10000) + (n4 * 5000) + (n5 * 2000) + (n6 * 1000) + (n7 * 500) + (n8 * 100);
         System.out.println("Total en el banco: " + total + " Bolívares");

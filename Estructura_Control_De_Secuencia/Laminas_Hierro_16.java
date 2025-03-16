@@ -1,5 +1,6 @@
+package Estructura_Control_De_Secuencia;
 public class Laminas_Hierro_16 {
-    public static void main(String[] args) {
+    public static void ejecutar() {
         double largo_Lamina, ancho_Lamina, area_Lamina, area_Pieza, piezas_Fabricadas, desperdicio;
 
         largo_Lamina = 4.0;

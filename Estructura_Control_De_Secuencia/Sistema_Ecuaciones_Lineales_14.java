@@ -1,8 +1,8 @@
+package Estructura_Control_De_Secuencia;
 import java.util.Scanner;
 
 public class Sistema_Ecuaciones_Lineales_14 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void ejecutar(Scanner scanner) {
         double a, b, c, d, e, f, determinante;
 
         System.out.print("Ingrese el valor de a: ");
@@ -17,7 +17,7 @@ public class Sistema_Ecuaciones_Lineales_14 {
         e = scanner.nextDouble();
         System.out.print("Ingrese el valor de f: ");
         f = scanner.nextDouble();
-        scanner.close();
+        scanner.nextLine();
 
         // Calcular el determinante
         determinante = (a * e) - (b * d);

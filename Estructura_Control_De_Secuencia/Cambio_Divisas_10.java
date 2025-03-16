@@ -1,8 +1,8 @@
+package Estructura_Control_De_Secuencia;
 import java.util.Scanner;
 
 public class Cambio_Divisas_10 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void ejecutar(Scanner scanner) {
         int opcion;
         double conversion, chelines, dracmas, pesetas, pesetas_d, pesetas_li;
         char respuesta;
@@ -78,6 +78,6 @@ public class Cambio_Divisas_10 {
                 }
             }
         } while (opcion != 4);
-        scanner.close();
+        scanner.nextLine();
     }
 }

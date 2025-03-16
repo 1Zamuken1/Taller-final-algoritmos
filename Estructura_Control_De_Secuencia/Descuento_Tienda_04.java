@@ -3,11 +3,11 @@
  Una tienda ofrece un descuento del 15% sobre el total de la compra y un cliente desea saber cuánto
 deberá pagar finalmente por su compra.
  */
+package Estructura_Control_De_Secuencia;
 import java.util.Scanner;
 
 public class Descuento_Tienda_04 {
-    public static void main(String[] args) {
-        Scanner compras = new Scanner(System.in);
+    public static void ejecutar(Scanner compras) {
         float contador_compras = 0, total = 0, descuento = 0;
         String entrada;
 
@@ -37,7 +37,7 @@ public class Descuento_Tienda_04 {
 
         } while (!entrada.equalsIgnoreCase("fin"));
 
-        compras.close();
+        compras.nextLine();
 
         descuento = (total * 10) / 100;
         System.out.println("Total de compras: $" + total);

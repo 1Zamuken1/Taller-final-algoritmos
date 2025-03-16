@@ -4,12 +4,12 @@
 desea saber cuánto dinero obtendrá por concepto de comisiones por las tres ventas que realizó en
 el mes y el total que recibirá tomando en cuenta su sueldo base y sus comisiones.
  */
+package Estructura_Control_De_Secuencia;
 import java.util.Scanner;
 
 public class Comisiones_Sueldo_03 {
-    public static void main(String[] args) {
+    public static void ejecutar(Scanner ingresos) {
         float comision, total;
-        Scanner ingresos = new Scanner(System.in);
 
         System.out.println("Programa que calcula sueldo base más comisión");
         System.out.println("Ingrese el monto de su sueldo base");
@@ -29,7 +29,7 @@ public class Comisiones_Sueldo_03 {
 
         System.out.printf("El total de su pago es de: $" + total);
 
-        ingresos.close();
+        ingresos.nextLine();
 
     }
 }

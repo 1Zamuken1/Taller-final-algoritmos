@@ -1,8 +1,8 @@
+package Estructura_Control_De_Secuencia;
 import java.util.Scanner;
 
 public class Agricultor_Mayorista_21 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void ejecutar(Scanner scanner) {
         int X;
         double Y, K, costoCompra, porcentajeGanancia;
 
@@ -15,7 +15,7 @@ public class Agricultor_Mayorista_21 {
         System.out.print("Ingrese el total de ingresos obtenidos: ");
         K = scanner.nextDouble();
 
-        scanner.close();
+        scanner.nextLine();
 
         costoCompra = (X / 12.0) * Y;
         porcentajeGanancia = ((K - costoCompra) / costoCompra) * 100;
