@@ -1,6 +1,10 @@
 import java.util.Scanner;
-import Estructura_Control_De_Secuencia.*;
 
+/**
+ * Clase que implementa un menú para seleccionar y ejecutar diferentes
+ * ejercicios
+ * siguiendo los principios de Programación Orientada a Objetos.
+ */
 public class Menu {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -40,81 +44,90 @@ public class Menu {
             int option = scanner.nextInt();
             scanner.nextLine(); // Limpia el buffer después de nextInt()
 
+            // Creamos un objeto que implementa la interfaz ControlSecuencia
+            ControlSecuencia ejercicio = null;
+
             switch (option) {
                 case 1:
-                    obtener_edades_01.ejecutar(scanner);
+                    ejercicio = new Ejercicio1();
                     break;
                 case 2:
-                    Porcentaje_Banco_02.ejecutar(scanner);
+                    ejercicio = new Ejercicio2();
                     break;
                 case 3:
-                    Comisiones_Sueldo_03.ejecutar(scanner);
+                    ejercicio = new Ejercicio3();
                     break;
                 case 4:
-                    Descuento_Tienda_04.ejecutar(scanner);
+                    ejercicio = new Ejercicio4();
                     break;
                 case 5:
-                    Calificacion_Computacion_05.ejecutar(scanner);
+                    ejercicio = new Ejercicio5();
                     break;
                 case 6:
-                    Porcentaje_Alumnos_06.ejecutar(scanner);
+                    ejercicio = new Ejercicio6();
                     break;
                 case 7:
-                    Conversor_metros_pies_pulgadas_07.ejecutar(scanner);
+                    ejercicio = new Ejercicio7();
                     break;
                 case 8:
-                    Area_triangulo_08.ejecutar(scanner);
+                    ejercicio = new Ejercicio8();
                     break;
                 case 9:
-                    Salario_Horas_09.ejecutar(scanner);
+                    ejercicio = new Ejercicio9();
                     break;
                 case 10:
-                    Cambio_Divisas_10.ejecutar(scanner);
+                    ejercicio = new Ejercicio10();
                     break;
                 case 11:
-                    Salario_Deducibles_11.ejecutar(scanner);
+                    ejercicio = new Ejercicio11();
                     break;
                 case 12:
-                    Promedio_Materias_Dificiles_12.ejecutar(scanner);
+                    ejercicio = new Ejercicio12();
                     break;
                 case 13:
-                    Bancos_N_Billetes_13.ejecutar(scanner);
+                    ejercicio = new Ejercicio13();
                     break;
                 case 14:
-                    Sistema_Ecuaciones_Lineales_14.ejecutar(scanner);
+                    ejercicio = new Ejercicio14();
                     break;
                 case 15:
-                    Mes_Luz_15.ejecutar(scanner);
+                    ejercicio = new Ejercicio15();
                     break;
                 case 16:
-                    Laminas_Hierro_16.ejecutar();
+                    ejercicio = new Ejercicio16();
                     break;
                 case 17:
-                    PVP_17.ejecutar(scanner);
+                    ejercicio = new Ejercicio17();
                     break;
                 case 18:
-                    Surtir_Gasolinera_18.ejecutar(scanner);
+                    ejercicio = new Ejercicio18();
                     break;
                 case 19:
-                    Presupuesto_Hospital_19.ejecutar(scanner);
+                    ejercicio = new Ejercicio19();
                     break;
                 case 20:
-                    Interes_Anual_20.ejecutar(scanner);
+                    ejercicio = new Ejercicio20();
                     break;
                 case 21:
-                    Agricultor_Mayorista_21.ejecutar(scanner);
+                    ejercicio = new Ejercicio21();
                     break;
                 case 22:
-                    Recargo_Computador_22.ejecutar(scanner);
+                    ejercicio = new Ejercicio22();
                     break;
                 case 23:
-                    Tonelada_Maiz_23.ejecutar(scanner);
+                    ejercicio = new Ejercicio23();
                     break;
                 default:
                     System.out.println("\n╔══════════════════════════════════════════╗");
                     System.out.println("║ Opción no válida. Intente de nuevo.     ║");
                     System.out.println("╚═════════════════════════════════════════╝");
             }
+
+            // Si se seleccionó un ejercicio válido, lo ejecutamos
+            if (ejercicio != null) {
+                ejercicio.ejecutar(scanner);
+            }
+
             System.out.println("\n╔═══════════════════════════════════════════╗");
             System.out.println("║ ¿Desea realizar otro ejercicio? (S/N)     ║");
             System.out.println("╚═══════════════════════════════════════════╝");
