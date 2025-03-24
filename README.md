@@ -13,20 +13,43 @@ Este repositorio contiene la primera parte del taller de algoritmos, enfocada en
 
 No requiere ninguna instalación específica, solo es necesario abrir el código en el IDE de preferencia, aunque se recomienda Visual Studio Code para una mejor experiencia.
 
-## Uso
+# Uso
 
-1. Acceder al archivo "Menu.java" ubicado en la carpeta "Estructura_Control_De_Secuencia"
-2. Ejecutar el archivo
-3. Se mostrará un menú para elegir alguno de los 23 ejercicios implementados
-4. Al finalizar la ejecución de un ejercicio, el programa preguntará si desea realizar otro ejercicio:
-   - Si responde "S", regresará al menú principal
-   - Si responde "N", el programa finalizará
+## Descripción General
+Este programa presenta un menú principal con dos estructuras de ejercicios y la opción de salir del programa.
+
+## Navegación del Menú Principal
+Seleccione una de las siguientes opciones:
+
+- **Opción 1**: Estructura 1 (Ejercicios 1-23)
+- **Opción 2**: Estructura 2 (Ejercicios 24-45)
+- **Opción 3**: Salir del programa
+
+## Submenús (Estructura 1 y Estructura 2)
+En cada submenú, tiene las siguientes opciones:
+
+- **Opción 0**: Regresar al menú principal
+- **Opciones 1-23**: Ejecutar ejercicios de la estructura de secuencia
+- **Opciones 24-45**: Ejecutar ejercicios de la estructura de control de desición
+
+Después de ejecutar un ejercicio, el programa volverá al submenú correspondiente.
+
+## Ejecución
+Para ejecutar el programa, siga estos pasos:
+
+1. Acceder al archivo `Menu.java`.
+2. Ejecutar el programa.
+3. Seguir las instrucciones en pantalla para navegar por los menús y seleccionar ejercicios.
+4. Usar la opción **0** para regresar al menú principal.
+5. Usar la opción **3** en el menú principal para salir completamente del programa.
+
 
 ## Estructura del proyecto
 
 Por el momento, el proyecto solo contiene:
-- Carpeta "Estructura_Control_De_Secuencia"
 - Archivo principal "Menu.java"
+- Archivo "EstructuraControlSecuencia.java"
+- Archivo "EstructuraControlDesicion.java"
 
 ## Contribuciones
 
