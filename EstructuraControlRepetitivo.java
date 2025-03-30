@@ -231,3 +231,142 @@ class Ejercicio49 implements EstructuraControlRepetitivo {
         System.out.println("h. Ninguna correcta: " + getNingunaCorrecta());
     }
 }
+
+/**
+ * Desarrolle un algoritmo o programa que permita calcular y mostrar la suma de
+ * todos los números pares comprendidos entre 97 y 1003.
+ * Respuesta: 249150
+ */
+class Ejercicio50 implements EstructuraControlRepetitivo {
+    @Override
+    public void ejecutar(Scanner scanner) {
+        int suma = 0;
+        for (int i = 98; i <= 1003; i += 2) {
+            suma += i;
+        }
+        System.out.println("La suma de los números pares entre 97 y 1003 es: " + suma);
+    }
+}
+
+/**
+ * Calcular el término doceavo y la suma de los doce primeros términos de la
+ * sucesión: 6, 11, 16, 21.
+ * Respuesta: a12=61, suma=402.
+ */
+
+class Ejercicio51 implements EstructuraControlRepetitivo {
+    private int a1, d, n;
+
+    // Constructor
+    public Ejercicio51() {
+        this.a1 = 6;
+        this.d = 5;
+        this.n = 12;
+    }
+
+    public int getA1() {
+        return a1;
+    }
+
+    public void setA1(int a1) {
+        this.a1 = a1;
+    }
+
+    public int getD() {
+        return d;
+    }
+
+    public void setD(int d) {
+        this.d = d;
+    }
+
+    public int getN() {
+        return n;
+    }
+
+    public void setN(int n) {
+        this.n = n;
+    }
+
+    // Método para calcular el término n-ésimo
+    public int calcularTerminoN() {
+        return a1 + (n - 1) * d;
+    }
+
+    // Método para calcular la suma de los n términos
+    public int calcularSuma() {
+        return (n * (a1 + calcularTerminoN())) / 2;
+    }
+
+    @Override
+    public void ejecutar(Scanner scanner) {
+        System.out.println("El término doceavo es: " + calcularTerminoN());
+        System.out.println("La suma de los 12 primeros términos es: " + calcularSuma());
+    }
+}
+
+/**
+ * Una persona debe realizar un muestreo con 100 personas para determinar el
+ * promedio de peso de los niños, jóvenes, adultos y viejos que existen en su
+ * zona habitacional. Para ello, conforme encuentra a las personas introduce los
+ * datos a su computadora, la cual mediante un programa las clasifica y
+ * despliega los cuatro promedios que la persona requiere. Las categorías se
+ * trabajan de cuerdo a la siguiente tabla:
+ */
+class Ejercicio52 implements EstructuraControlRepetitivo {
+    private int totalNinos, totalJovenes, totalAdultos, totalViejos;
+    private double sumaPesoNinos, sumaPesoJovenes, sumaPesoAdultos, sumaPesoViejos;
+
+    // Constructor
+    public Ejercicio52() {
+        this.totalNinos = 0;
+        this.totalJovenes = 0;
+        this.totalAdultos = 0;
+        this.totalViejos = 0;
+        this.sumaPesoNinos = 0;
+        this.sumaPesoJovenes = 0;
+        this.sumaPesoAdultos = 0;
+        this.sumaPesoViejos = 0;
+    }
+
+    // Métodos para clasificar a la persona y acumular peso
+    public void clasificarPersona(int edad, double peso) {
+        if (edad >= 0 && edad <= 12) {
+            totalNinos++;
+            sumaPesoNinos += peso;
+        } else if (edad >= 13 && edad <= 29) {
+            totalJovenes++;
+            sumaPesoJovenes += peso;
+        } else if (edad >= 30 && edad <= 59) {
+            totalAdultos++;
+            sumaPesoAdultos += peso;
+        } else if (edad >= 60) {
+            totalViejos++;
+            sumaPesoViejos += peso;
+        }
+    }
+
+    public double calcularPromedio(double suma, int total) {
+        return total == 0 ? 0 : suma / total;
+    }
+
+    @Override
+    public void ejecutar(Scanner scanner) {
+        System.out.println("Ingrese los datos de 100 personas (edad y peso):");
+
+        for (int i = 1; i <= 100; i++) {
+            System.out.print("Persona " + i + " - Edad: ");
+            int edad = scanner.nextInt();
+            System.out.print("Persona " + i + " - Peso: ");
+            double peso = scanner.nextDouble();
+            clasificarPersona(edad, peso);
+        }
+
+        System.out.println("\nPromedios de peso por categoría:");
+        System.out.println("Niños: " + calcularPromedio(sumaPesoNinos, totalNinos));
+        System.out.println("Jóvenes: " + calcularPromedio(sumaPesoJovenes, totalJovenes));
+        System.out.println("Adultos: " + calcularPromedio(sumaPesoAdultos, totalAdultos));
+        System.out.println("Viejos: " + calcularPromedio(sumaPesoViejos, totalViejos));
+    }
+
+}

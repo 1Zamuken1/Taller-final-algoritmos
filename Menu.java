@@ -291,16 +291,16 @@ public class Menu {
                 case 49:
                     ejercicio = new Ejercicio49();
                     break;
-                /*case 28:
-                    ejercicio = new Ejercicio28();
+                case 50:
+                    ejercicio = new Ejercicio50();
                     break;
-                case 29:
-                    ejercicio = new Ejercicio29();
+                case 51:
+                    ejercicio = new Ejercicio51();
                     break;
-                case 30:
-                    ejercicio = new Ejercicio30();
+                case 52:
+                    ejercicio = new Ejercicio52();
                     break;
-                case 31:
+                /*case 31:
                     ejercicio = new Ejercicio31();
                     break;
                 case 32:
