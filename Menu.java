@@ -16,7 +16,10 @@ public class Menu {
             System.out.println("║     (Ejercicios 1-23)     ║");
             System.out.println("║  2. Estructura 2          ║");
             System.out.println("║     (Ejercicios 24-45)    ║");
-            System.out.println("║  3. Salir                 ║");
+            System.out.println("║  3. Estructura 3          ║");
+            System.out.println("║     (Ejercicios 46-81)    ║");
+            System.out.println("║   (aún en construcción)   ║");
+            System.out.println("║  4. Salir                 ║");
             System.out.println("╚═══════════════════════════╝");
 
             System.out.print("Seleccione una opción: ");
@@ -31,6 +34,9 @@ public class Menu {
                     ejecutarMenuEstructura2(scanner);
                     break;
                 case 3:
+                    ejecutarMenuEstructura3(scanner);
+                    break;
+                case 4:
                     System.out.println("\n╔═══════════════════════════════════╗");
                     System.out.println("║      Saliendo del programa        ║");
                     System.out.println("╚═══════════════════════════════════╝");
@@ -237,6 +243,108 @@ public class Menu {
                 case 45:
                     ejercicio = new Ejercicio45();
                     break;
+                default:
+                    System.out.println("\n╔══════════════════════════════════════════╗");
+                    System.out.println("║ Opción no válida. Intente de nuevo.     ║");
+                    System.out.println("╚═════════════════════════════════════════╝");
+            }
+
+            if (ejercicio != null) {
+                ejercicio.ejecutar(scanner);
+            }
+        }
+    }
+
+    // Método para ejecutar el menú de la Estructura 3 (Ejercicios 46-81)
+    private static void ejecutarMenuEstructura3(Scanner scanner) {
+        while (true) {
+            System.out.println("\n╔═══════════════════════╗");
+            System.out.println("║   MENÚ ESTRUCTURA 3    ║");
+            System.out.println("╠════════════════════════╣");
+            System.out.println("║     0. Salir           ║");
+            // Ejercicios del 46 al 81
+            for (int i = 46; i <= 81; i++) {
+                System.out.printf("║   %2d. Ejercicio %2d     ║%n", i - 45, i);
+            }
+            System.out.println("╠════════════════════════╣");
+            System.out.println("║ Seleccione una opción: ║");
+            System.out.println("╚════════════════════════╝");
+
+            int option = scanner.nextInt();
+            scanner.nextLine(); // Limpia el buffer después de nextInt()
+
+            if (option == 0)
+                break;
+
+            EstructuraControlRepetitivo ejercicio = null;
+
+            switch (option) {
+                case 46:
+                    ejercicio = new Ejercicio46();
+                    break;
+                case 47:
+                    ejercicio = new Ejercicio47();
+                    break;
+                case 48:
+                    ejercicio = new Ejercicio48();
+                    break;
+                case 49:
+                    ejercicio = new Ejercicio49();
+                    break;
+                /*case 28:
+                    ejercicio = new Ejercicio28();
+                    break;
+                case 29:
+                    ejercicio = new Ejercicio29();
+                    break;
+                case 30:
+                    ejercicio = new Ejercicio30();
+                    break;
+                case 31:
+                    ejercicio = new Ejercicio31();
+                    break;
+                case 32:
+                    ejercicio = new Ejercicio32();
+                    break;
+                case 33:
+                    ejercicio = new Ejercicio33();
+                    break;
+                case 34:
+                    ejercicio = new Ejercicio34();
+                    break;
+                case 35:
+                    ejercicio = new Ejercicio35();
+                    break;
+                case 36:
+                    ejercicio = new Ejercicio36();
+                    break;
+                case 37:
+                    ejercicio = new Ejercicio37();
+                    break;
+                case 38:
+                    ejercicio = new Ejercicio38();
+                    break;
+                case 39:
+                    ejercicio = new Ejercicio39();
+                    break;
+                case 40:
+                    ejercicio = new Ejercicio40();
+                    break;
+                case 41:
+                    ejercicio = new Ejercicio41();
+                    break;
+                case 42:
+                    ejercicio = new Ejercicio42();
+                    break;
+                case 43:
+                    ejercicio = new Ejercicio43();
+                    break;
+                case 44:
+                    ejercicio = new Ejercicio44();
+                    break;
+                case 45:
+                    ejercicio = new Ejercicio45();
+                    break;*/
                 default:
                     System.out.println("\n╔══════════════════════════════════════════╗");
                     System.out.println("║ Opción no válida. Intente de nuevo.     ║");
