@@ -258,7 +258,7 @@ public class Menu {
     // Método para ejecutar el menú de la Estructura 3 (Ejercicios 46-81)
     private static void ejecutarMenuEstructura3(Scanner scanner) {
         while (true) {
-            System.out.println("\n╔═══════════════════════╗");
+            System.out.println("\n╔════════════════════════╗");
             System.out.println("║   MENÚ ESTRUCTURA 3    ║");
             System.out.println("╠════════════════════════╣");
             System.out.println("║     0. Salir           ║");
@@ -300,25 +300,25 @@ public class Menu {
                 case 52:
                     ejercicio = new Ejercicio52();
                     break;
-                /*case 31:
-                    ejercicio = new Ejercicio31();
+                case 53:
+                    ejercicio = new Ejercicio53();
                     break;
-                case 32:
-                    ejercicio = new Ejercicio32();
+                case 54:
+                    ejercicio = new Ejercicio54();
                     break;
-                case 33:
-                    ejercicio = new Ejercicio33();
+                case 55:
+                    ejercicio = new Ejercicio55();
                     break;
-                case 34:
-                    ejercicio = new Ejercicio34();
+                case 56:
+                    ejercicio = new Ejercicio56();
                     break;
-                case 35:
-                    ejercicio = new Ejercicio35();
+                case 57:
+                    ejercicio = new Ejercicio57();
                     break;
-                case 36:
-                    ejercicio = new Ejercicio36();
+                case 58:
+                    ejercicio = new Ejercicio58();
                     break;
-                case 37:
+                /*case 37:
                     ejercicio = new Ejercicio37();
                     break;
                 case 38:
